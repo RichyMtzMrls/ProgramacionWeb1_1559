@@ -1,0 +1,306 @@
+/* CONFIGURACIÓN GENERAL DE LA PÁGINA DE LOS POSTRES */
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    border: 0;
+    /* APLICANDO LAS FUENTES PERSONALIZADAS */
+    font-family: Montserrat;
+    background-repeat: no-repeat;
+}
+
+/* BARRA DE NAVEGACIÓN */
+#encabezado{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    justify-content: center;
+    place-items: center;
+    background-color: #2c2c2c;
+
+}
+
+/* IMAGEN DEL LOGO DEL RESTAURANTE */
+#encabezado img{
+    width: 20%;
+    height: auto;
+}
+
+#navegacion{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1.3em;
+    gap: 3em;
+}
+
+/* ENLACES DE LA BARRA DE NAVEGACIÓN */
+#navegacion a{
+    text-decoration: none;
+    color: #fff;
+    border: 0.2em solid #fff;
+    padding: 0.6em;
+    text-align: center;
+    text-shadow: 0.2em 0.2em 0.2em #faad53;
+}
+
+/* CUERPO DE LA PÁGINA DE LOS POSTRES */
+#postres{
+    display: grid;
+    background-color: #f7e7a2;
+}
+
+/* ENCABEZADO DE LA PAGINA DE LOS POSTRES */
+.encabezado--postres{
+    display: grid;
+    color: #fff;
+    background-color: #9e130f;
+    text-align: center;
+    font-size: x-large;
+    text-shadow: 0.2em 0.2em 0.2em #faad53;
+}
+
+/* CONTENEDOR DE LAS TARJETAS DE LOS POSTRES */
+.contenedor--postres{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* TARJETAS DE CADA POSTRE */
+.postre{
+    max-width: 50em;
+    margin: 5em;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 2em;
+    border: 0.2em solid #000;
+    background-color: #f8c37d;
+    box-shadow: 0.8em 0.8em 0 #2c2c2c;
+    padding: 2em;
+}
+
+/* IMAGEN DE CADA POSTRE */
+.postre img{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0.4em 0.4em 0.3em #000;
+}
+
+/* ENCABEZADO CON EL NOMBRE DE CADA POSTRE */
+.descripcion h3{
+    font-size: x-large;
+    font-family: Montserrat;
+    text-align: center;
+}
+
+/* DESCRIPCIÓN DE CADA POSTRE */
+.descripcion p{
+    text-align: center;
+}
+
+/* PRECIO DE CADA POSTRE */
+.precio{
+    font-size: 2em;
+    font-family: Montserrat-Bolder;
+    font-weight: bolder;
+    text-align: right;
+    grid-column: 2 / 3;
+}
+
+/* PIE DE PÁGINA */
+#pie--pagina{
+    background-color: #2c2c2c;
+    color: #fff;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+}
+
+/* IMAGENES DEL PIE DE PAGINA */
+#pie--pagina img{
+    width: 60px;
+    height: 60px;
+}
+
+#pie--pagina section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.1em;
+}
+
+/* ENLACES DEL PIE DE PÁGINA */
+#pie--pagina a{
+    color: #faad53;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#pie--pagina a:hover {
+    text-decoration: underline;
+}
+
+/* SECCION DE LOS DERECHOS DE AUTOR */
+.derechos--autor {
+    grid-column: 1 / -1;
+    justify-self: center;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* TIPOGRAFIAS PERSONALIZADAS */
+@font-face{
+    font-family: "Montserrat";
+    src: url("../Fonts/static/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face{
+    font-family: "Montserrat-Bolder";
+    src: url("../Fonts/static/Montserrat-SemiBold.ttf") format("truetype");
+}
+
+/* MEDIAS QUERIES PARA TABLETS */
+@media screen and (max-width: 1024px){
+
+    /* BARRA DE NAVEGACIÓN */
+    #encabezado{
+        grid-template-columns: 1fr;
+        padding: 1em;
+        gap: 1em;
+    }
+
+    /* IMAGEN DEL LOGO DEL RESTAURANTE */
+    #encabezado img{
+        width: 30%;
+    }
+
+    #navegacion{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
+    }
+
+    /* TARJETAS DE CADA POSTRE */
+    .postre{
+        max-width: 40em;
+        margin: 3em;
+    }
+}
+
+/* MEDIAS QUERIES PARA CELULARES GRANDES */
+@media screen and (max-width: 768px){
+
+    /* BARRA DE NAVEGACIÓN */
+    #navegacion{
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        font-size: 1.1em;
+    }
+
+    /* IMAGEN DEL LOGO DEL RESTAURANTE */
+    #encabezado img{
+        width: 40%;
+    }
+
+    /* ENCABEZADO DE LA PAGINA DE LOS POSTRES */
+    .encabezado--postres{
+        font-size: 1.8em;
+        padding: 0.8em;
+    }
+
+    /* TARJETAS DE CADA POSTRE */
+    .postre{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* DESCRIPCION DE CADA POSTRE */
+    .descripcion p{
+        text-align: center;
+    }
+
+    /* PIE DE PÁGINA */
+    #pie--pagina{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #pie--pagina section{
+        justify-content: center;
+    }
+
+    /* SECCIÓN DE LOS DERECHOS DE AUTOR */
+    .derechos--autor{
+        margin-top: 2em;
+    }
+}
+
+/* MEDIAS QUERIES PARA CELULARES PEQUEÑOS */
+@media screen and (max-width: 480px){
+
+    /* BARRA DE NAVEGACIÓN */
+    #encabezado img{
+        width: 55%;
+    }
+
+    #navegacion{
+        grid-template-columns: 1fr;
+        gap: 0.5em;
+        font-size: 1em;
+    }
+
+    /* TARJETAS DE CADA POSTRE */
+    .postre{
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        align-items: center;
+        gap: 1em;
+        width: 95%;
+        margin: 1.5em auto;
+    }
+
+    /* IMAGENES DE CADA POSTRE */
+    .postre img{
+        width: 120px;
+        height: 120px;
+    }
+
+    /* ENCABEZADO CON EL NOMBRE DEL POSTRE */
+    .descripcion h3{
+        font-size: large;
+        text-align: center;
+    }
+
+    /* DESCRIPCION DE CADA POSTRE */
+    .descripcion p{
+        text-align: center;
+    }
+
+    /* PIE DE PAGINA */
+    #pie--pagina {
+        padding: 1.5em;
+    }
+
+    /* IMAGENES DEL PIE DE PÁGINA */
+    #pie--pagina img{
+        width: 45px;
+        height: 45px;
+    }
+
+    #pie--pagina section{
+        font-size: 1em;
+        gap: 0.8em;
+    }
+
+    /* SECCIÓN DE LOS DERECHOS DE AUTOR */
+    .derechos--autor{
+        font-size: 0.8em;
+    }
+}
